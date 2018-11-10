@@ -1,0 +1,30 @@
+body {
+    padding-top: 35px;
+}
+
+.content {
+    text-align: center;
+}
+
+.header {
+    font-size: large;
+    padding-bottom: 25px;
+}
+
+.inline {
+    padding-bottom: 25px
+}
+
+.inline li {
+    display: inline-block;
+    padding-right: 3px;
+}
+
+a:hover {
+    color: #2F4F4F;
+}
+
+.footer {
+    font-size: small;
+}
+
