@@ -5,6 +5,8 @@ body {
     justify-content: center;
     height: 100%;
     margin: 0;
+    background-color: #FBFBFF;
+    color: #12355B;
 }
 
 .content {
@@ -24,9 +26,12 @@ body {
     display: inline-block;
     padding-right: 3px;
 }
+a {
+    color: #12355B;
+} 
 
 a:hover {
-    color: #2F4F4F;
+    color: #FF8552;
 }
 
 .footer {
