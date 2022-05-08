@@ -18,23 +18,22 @@ body {
     padding-bottom: 25px;
 }
 
-.inline {
-    padding-bottom: 25px
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
 }
 
-.inline li {
+.contents {
+    text-align: left;
     display: inline-block;
-    padding-right: 3px;
 }
+
 a {
     color: #12355B;
+    text-decoration: none;
 } 
 
 a:hover {
     color: #FF8552;
 }
-
-.footer {
-    font-size: small;
-}
-
