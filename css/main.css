@@ -14,7 +14,7 @@ body {
 }
 
 .header {
-    font-size: large;
+    font-size: 35px;
     margin-bottom: 25px;
 }
 
@@ -29,6 +29,7 @@ li {
 }
 
 .contents {
+    font-size: 30px;
     text-align: left;
     display: inline-block;
 }
