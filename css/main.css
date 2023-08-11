@@ -1,44 +1,83 @@
 body {
-    font-family: 'Zen Maru Gothic', sans-serif;
-    display: grid;
+    font-family: 'Comic Mono', sans-serif;
+    display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     background-color: #FBFBFF;
     color: #12355B;
+    font-size: 40px;
 }
 
 .content {
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .header {
-    font-size: 35px;
     margin-bottom: 25px;
 }
 
-ul {
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
+.header span {
+  position: relative;
 }
 
-li {
-    margin-bottom: 15px;
+.header span::before {
+  content: "/home/ryoo14";
+  color: #12355B;
+}
+
+.header span::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  background-color: #FBFBFF;
+  border-left: 2px solid #12355B;
+  right: -8px;
+  animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 2px solid #FBFBFF00;
+  }
+}
+
+@keyframes typing {
+  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+    width: 0;
+  }
+  0%, 5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%, 100%{
+    width: calc(100% + 8px);
+  }
 }
 
 .contents {
-    font-size: 30px;
-    text-align: left;
-    display: inline-block;
+  font-size: 0.9em;
+  text-align: left;
 }
 
-a {
-    color: #12355B;
-    text-decoration: none;
+.contents ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.contents li {
+  margin-bottom: 25;
+  letter-spacing: 0.1em;
+}
+
+.contents a {
+  color: #12355B;
+  text-decoration: none;
 } 
 
-a:hover {
-    color: #FF8552;
+.contents a:hover {
+  color: #FF8552;
 }
