@@ -1,11 +1,8 @@
 body {
-  font-family: 'Comic Mono', sans-serif;
+  font-family: 'Comic Mono', monospace;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
   background-color: #fffcf9;
   color: #292f36;
   font-size: 30px;
@@ -45,13 +42,15 @@ body {
 
 .command::before {
   background: #fffcf9;
-  animation: typing 1s steps(15) 0.8s forwards;
+  animation: 
+    typing 1s steps(15) 0.8s forwards;
 }
 
 .command::after {
   width: 0.125em;
-  background: black;
-  animation: typing 1s steps(15) 0.8s forwards,
+  background: #292f36;
+  animation: 
+    typing 1s steps(15) 0.8s forwards,
     cursor 750ms steps(15) infinite;
 }
 
@@ -68,20 +67,15 @@ body {
 }
 
 .contents {
-  text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: left;
   width: 277px;
   opacity: 0;
   animation: fadein 500ms 2.0s forwards;
 }
 
 @keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
+  to {
     opacity: 1;
   }
 }
