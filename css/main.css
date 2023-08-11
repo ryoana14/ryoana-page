@@ -9,10 +9,6 @@ body {
     color: #12355B;
 }
 
-.content {
-    text-align: center;
-}
-
 .header {
     font-size: 35px;
     margin-bottom: 25px;
@@ -26,7 +22,7 @@ body {
 .header span::before {
   content: "/home/ryoo14";
   color: #12355B;
-  animation: words 020s infinite;
+  animation: words 20s infinite;
 }
 
 .header span::after {
@@ -68,7 +64,7 @@ body {
   10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
     width: 0;
   }
-  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+  0%, 5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%, 100%{
     width: calc(100% + 8px);
   }
 }
