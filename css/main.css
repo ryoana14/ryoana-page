@@ -16,6 +16,61 @@ body {
 .header {
     font-size: 35px;
     margin-bottom: 25px;
+    min-width: 500px;
+}
+
+.header span {
+  position: relative;
+}
+
+.header span::before {
+  content: "/home/ryoo14";
+  color: #12355B;
+  animation: words 020s infinite;
+}
+
+.header span::after {
+  content: "";
+  position: absolute;
+  width: cacl(100% + 8px);
+  height: 100%;
+  background-color: #FBFBFF;
+  border-left: 2px solid #12355B;
+  right: -8px;
+  animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 2px solid #FBFBFF00;
+  }
+}
+
+@keyframes  words {
+  0%, 20% {
+    content: "/home/ryoo14";
+  }
+  21%, 40% {
+    content: "/var/log/ryoo14";
+  }
+  41%, 60% {
+    content: "github.com/ryoo14";
+  }
+  61%, 80% {
+    content: "instagram.com/ryoo14";
+  }
+  81%, 100% {
+    content: "twitter.com/ryoo141";
+  }
+}
+
+@keyframes typing {
+  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+    width: 0;
+  }
+  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+    width: calc(100% + 8px);
+  }
 }
 
 ul {
