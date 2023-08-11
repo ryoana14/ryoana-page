@@ -39,7 +39,7 @@ body {
   background-color: #FBFBFF;
   border-left: 2px solid #12355B;
   right: -8px;
-  animation: cursor .8s infinite, typing 20s steps(14) infinite;
+  animation: cursor .8s infinite, typing 4s steps(12) infinite;
 }
 
 @keyframes cursor {
@@ -49,10 +49,16 @@ body {
 }
 
 @keyframes typing {
-  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+  /*10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
     width: 0;
-  }
+ }
   0%, 5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%, 100%{
+    width: calc(100% + 8px);
+  }*/
+  30%, 35%, 70%, 75% {
+    width: 0;
+ }
+  0%, 100%{
     width: calc(100% + 8px);
   }
 }
