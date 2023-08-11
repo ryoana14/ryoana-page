@@ -1,14 +1,14 @@
 body {
-    font-family: 'Comic Mono', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    background-color: #FBFBFF;
-    color: #12355B;
-    font-size: 40px;
+  font-family: 'Comic Mono', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: #fffcf9;
+  color: #292f36;
+  font-size: 30px;
 }
 
 .content {
@@ -19,71 +19,79 @@ body {
 }
 
 .header {
-    margin-bottom: 25px;
+  display: flex;
+  margin-bottom: 25px;
 }
 
-.header span {
+.prompt {
+  color: #FF8550;
+  margin-right: 0.5em;;
+}
+
+.command {
   position: relative;
+  width: max-content;
 }
 
-.header span::before {
-  content: "/home/ryoo14";
-  color: #12355B;
-}
-
-.header span::after {
+.command::before,
+.command::after {
   content: "";
   position: absolute;
-  width: 300px;
-  height: 100%;
-  background-color: #FBFBFF;
-  border-left: 2px solid #12355B;
-  right: -8px;
-  animation: cursor .8s infinite, typing 4s steps(12) infinite;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.command::before {
+  background: #fffcf9;
+  animation: typing 1s steps(15) 0.8s forwards;
+}
+
+.command::after {
+  width: 0.125em;
+  background: black;
+  animation: typing 1s steps(15) 0.8s forwards,
+    cursor 750ms steps(15) infinite;
+}
+
+@keyframes typing {
+  to {
+    left: 100%;
+  }
 }
 
 @keyframes cursor {
   to {
-    border-left: 2px solid #FBFBFF00;
-  }
-}
-
-@keyframes typing {
-  /*10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
-    width: 0;
- }
-  0%, 5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%, 100%{
-    width: calc(100% + 8px);
-  }*/
-  30%, 35%, 70%, 75% {
-    width: 0;
- }
-  0%, 100%{
-    width: calc(100% + 8px);
+    background: transparent;
   }
 }
 
 .contents {
-  font-size: 0.9em;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 277px;
+  opacity: 0;
+  animation: fadein 500ms 2.0s forwards;
 }
 
-.contents ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-
-.contents li {
-  margin-bottom: 25;
-  letter-spacing: 0.1em;
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .contents a {
-  color: #12355B;
+  margin-bottom: 0.5em;
+  color: #292f36;
   text-decoration: none;
 } 
 
 .contents a:hover {
-  color: #FF8552;
+  color: #FF8550;
 }
