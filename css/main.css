@@ -69,7 +69,8 @@ body {
 }
 
 .contents li {
-  margin-bottom: 15px;
+  margin-bottom: 25;
+  letter-spacing: 0.1em;
 }
 
 .contents a {
