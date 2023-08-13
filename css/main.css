@@ -14,13 +14,6 @@ body {
   font-size: 30px;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .header {
   display: flex;
   margin-bottom: 25px;
@@ -75,7 +68,6 @@ body {
 .contents {
   display: flex;
   flex-direction: column;
-  width: 277px;
   opacity: 0;
   animation: fadein 500ms 2.0s forwards;
 }
