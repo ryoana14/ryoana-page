@@ -1,10 +1,16 @@
+:root {
+  --background-color: #fffcf9;
+  --font-color: #292f36;
+  --acceent-color: #ff8550;
+}
+
 body {
   font-family: 'Comic Mono', monospace;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fffcf9;
-  color: #292f36;
+  background-color: var(--background-color);
+  color: var(--font-color);
   font-size: 30px;
 }
 
@@ -21,7 +27,7 @@ body {
 }
 
 .prompt {
-  color: #FF8550;
+  color: var(--acceent-color);
   margin-right: 0.5em;;
 }
 
@@ -41,14 +47,14 @@ body {
 }
 
 .command::before {
-  background: #fffcf9;
+  background: var(--background-color);
   animation: 
     typing 1s steps(15) 0.8s forwards;
 }
 
 .command::after {
   width: 0.125em;
-  background: #292f36;
+  background: var(--font-color);
   animation: 
     typing 1s steps(15) 0.8s forwards,
     cursor 750ms steps(15) infinite;
@@ -82,10 +88,9 @@ body {
 
 .contents a {
   margin-bottom: 0.5em;
-  color: #292f36;
   text-decoration: none;
 } 
 
 .contents a:hover {
-  color: #FF8550;
+  color: var(--acceent-color);
 }
