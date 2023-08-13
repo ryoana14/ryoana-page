@@ -81,6 +81,7 @@ body {
 .contents a {
   margin-bottom: 0.5em;
   text-decoration: none;
+  color: var(--font-color);
 } 
 
 .contents a:hover {
